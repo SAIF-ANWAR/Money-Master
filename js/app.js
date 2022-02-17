@@ -3,12 +3,15 @@
 function calculateExpense() {
     const foodText = document.getElementById("food");
     const foodTotal = parseFloat(foodText.value);
+    foodText.value = "";
 
     const rentText = document.getElementById("rent");
     const rentTotal = parseFloat(rentText.value);
+    rentText.value = "";
 
     const clothesText = document.getElementById("clothes");
-    const clothesTotal = parseFloat(rentText.value);
+    const clothesTotal = parseFloat(clothesText.value);
+    clothesText.value = "";
 
     const expense = document.getElementById("total-expense");
     const totalExpense = expense.innerText;
@@ -24,6 +27,7 @@ function calculateExpense() {
 function calculateBalance() {
     const incomeText = document.getElementById("income");
     const incomeTotal = parseFloat(incomeText.value);
+    incomeText.value = "";
 
     const balance = document.getElementById("total-balance");
     const balanceTotal = balance.innerText;
