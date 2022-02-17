@@ -20,7 +20,14 @@ function calculateExpense() {
         const failError = document.getElementById("error");
         failError.style.display = "block";
         const expBalance = document.getElementById("exp-balance");
-        expBalance.style.display = "none"
+        expBalance.style.display = "none";
+
+    }
+    else if ((isNaN(foodTotal) == true) || (isNaN(rentTotal) == true) || (isNaN(clothesTotal) == true)) {
+        const stringlError = document.getElementById("string-error");
+        stringlError.style.display = "block";
+        const expBalance = document.getElementById("exp-balance");
+        expBalance.style.display = "none";
     }
     else {
         const totalExpenseAmount = foodTotal + rentTotal + clothesTotal;
@@ -41,7 +48,7 @@ function calculateBalance() {
     const balance = document.getElementById("total-balance");
     const balanceTotal = balance.innerText;
 
-    if (incomeText < 0) {
+    if (incomeTotal < 0) {
         const failError = document.getElementById("error");
         failError.style.display = "block";
         const expBalance = document.getElementById("exp-balance");
@@ -52,32 +59,4 @@ function calculateBalance() {
         balance.innerText = totalBalanceAmount;
     }
 
-}
-
-
-// document.getElementById("calculate").addEventListener('click', function () {
-//     const incomeText = document.getElementById("income");
-//     const incomeTotal = parseFloat(incomeText.value);
-
-    // const foodText = document.getElementById("food");
-    // const foodTotal = parseFloat(foodText.value);
-
-    // const rentText = document.getElementById("rent");
-    // const rentTotal = parseFloat(rentText.value);
-
-    // const clothesText = document.getElementById("clothes");
-    // const clothesTotal = parseFloat(rentText.value);
-
-    // const expense = document.getElementById("total-expense");
-    // const totalExpense = expense.innerText;
-
-    // const totalExpenseAmount = foodTotal + rentTotal + clothesTotal;
-    // expense.innerText = totalExpenseAmount;
-
-//     const balance = document.getElementById("total-balance");
-//     const balanceTotal = balance.innerText;
-
-//     const totalBalanceAmount = incomeTotal - totalExpenseAmount;
-//     balance.innerText = totalBalanceAmount;
-
-// })
+};

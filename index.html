@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <button onclick="calculateBalance()" id="calculate"
-                            class="calculate px-4 py-2 fs-5 btn  text-white mx-auto mt-3">Calculate</button>
+                            class="calculate px-4 py-2 fs-5 btn btn-info text-white mx-auto mt-3">Calculate</button>
                         <div id="exp-balance">
                             <h3 class=" text-center m-3">Total Expenses: <span id="total-expense"> 0000</span> </h3>
                             <h3 class=" text-center"> Balance: <span id="total-balance">0000</span> </h3>
@@ -78,10 +78,29 @@
                         <!-- Error section  -->
                         <div>
                             <h4 id="error" class="error p-2 ">Pleases enter positive value</h4>
-                            <!-- <h4 id="string-error" class="string-error p-2 ">Use only numbers</h4> -->
+                            <h4 id="string-error" class="string-error p-2 ">Use only numbers</h4>
 
                         </div>
+                        <div class="row my-4 mx-auto">
+                            <div class="container col-lg-12 d-flex align-items-center mx-5">
+                                <div class="col-lg-6 d-flex justify-content-center">
+                                    <h5>Save:</h5>
+                                    <input id="saving-input" class="border border-secondary rounded" type="text">
+                                </div>
+                                <div class="col-lg-3 d-flex justify-content-between align-items-center">
+                                    <h4>%</h4>
+                                    <button id="saving-btn"
+                                        class="px-4 py-1 fs-5 btn btn-info text-white mx-auto">Save</button>
+                                </div>
+                            </div>
 
+                        </div>
+                        <div class="div">
+                            <h3 class="text-center">Saving Amount: <span id="saving-amount">0000</span></h3>
+                        </div>
+                        <div class="div">
+                            <h3 class="text-center">Reamining Balance: <span id="remaining-balances">0000</span></h3>
+                        </div>
                     </div>
 
                 </div>
