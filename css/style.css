@@ -2,10 +2,7 @@
     display: block;
     
 }
-/* #saving-btn{
-    display: block;
-    background-color: rgb(59, 132, 243);
-} */
+
 .title{
     color: #16aa5b;
     
@@ -22,6 +19,13 @@
     margin-left: 10px;
 }
 .string-error{
+    background-color: rgb(27, 26, 26);
+    color: rgb(231, 35, 35);
+    display: none;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.calculation-error{
     background-color: rgb(27, 26, 26);
     color: rgb(231, 35, 35);
     display: none;

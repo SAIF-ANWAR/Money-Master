@@ -54,6 +54,7 @@ function calculateBalance() {
         const expBalance = document.getElementById("exp-balance");
         expBalance.style.display = "none"
     }
+
     else {
         const totalBalanceAmount = incomeTotal - calculateExpense();
         balance.innerText = totalBalanceAmount;
