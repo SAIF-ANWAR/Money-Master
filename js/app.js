@@ -15,6 +15,7 @@ function calculateExpense() {
 
     const expense = document.getElementById("total-expense");
     const totalExpense = expense.innerText;
+
     if (foodTotal < 0 || rentTotal < 0 || clothesTotal < 0) {
         const failError = document.getElementById("error");
         failError.style.display = "block";
@@ -26,6 +27,7 @@ function calculateExpense() {
         expense.innerText = totalExpenseAmount;
         return totalExpenseAmount;
     }
+
 
 }
 
@@ -39,7 +41,7 @@ function calculateBalance() {
     const balance = document.getElementById("total-balance");
     const balanceTotal = balance.innerText;
 
-    if (incomeTotal < 0) {
+    if (incomeText < 0) {
         const failError = document.getElementById("error");
         failError.style.display = "block";
         const expBalance = document.getElementById("exp-balance");
