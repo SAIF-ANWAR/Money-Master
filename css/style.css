@@ -10,3 +10,10 @@
 .calculation{
     background-color: rgb(243, 239, 242);
 }
+.error{
+    background-color: rgb(27, 26, 26);
+    color: rgb(231, 35, 35);
+    display: none;
+    margin-top: 20px;
+    margin-left: 10px;
+}

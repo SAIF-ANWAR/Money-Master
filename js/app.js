@@ -15,11 +15,18 @@ function calculateExpense() {
 
     const expense = document.getElementById("total-expense");
     const totalExpense = expense.innerText;
+    if (foodTotal < 0 || rentTotal < 0 || clothesTotal < 0) {
+        const failError = document.getElementById("error");
+        failError.style.display = "block";
+        const expBalance = document.getElementById("exp-balance");
+        expBalance.style.display = "none"
+    }
+    else {
+        const totalExpenseAmount = foodTotal + rentTotal + clothesTotal;
+        expense.innerText = totalExpenseAmount;
+        return totalExpenseAmount;
+    }
 
-    const totalExpenseAmount = foodTotal + rentTotal + clothesTotal;
-    expense.innerText = totalExpenseAmount;
-
-    return totalExpenseAmount;
 }
 
 // calculate total balance 
@@ -32,9 +39,19 @@ function calculateBalance() {
     const balance = document.getElementById("total-balance");
     const balanceTotal = balance.innerText;
 
-    const totalBalanceAmount = incomeTotal - calculateExpense();
-    balance.innerText = totalBalanceAmount;
+    if (incomeTotal < 0) {
+        const failError = document.getElementById("error");
+        failError.style.display = "block";
+        const expBalance = document.getElementById("exp-balance");
+        expBalance.style.display = "none"
+    }
+    else {
+        const totalBalanceAmount = incomeTotal - calculateExpense();
+        balance.innerText = totalBalanceAmount;
+    }
+
 }
+
 
 // document.getElementById("calculate").addEventListener('click', function () {
 //     const incomeText = document.getElementById("income");
