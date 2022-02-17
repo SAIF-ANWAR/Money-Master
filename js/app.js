@@ -1,4 +1,6 @@
-function monthlyExpense() {
+// calculate total expense 
+
+function calculateExpense() {
     const foodText = document.getElementById("food");
     const foodTotal = parseFloat(foodText.value);
 
@@ -14,17 +16,19 @@ function monthlyExpense() {
     const totalExpenseAmount = foodTotal + rentTotal + clothesTotal;
     expense.innerText = totalExpenseAmount;
 
-    return monthlyExpense();
+    return totalExpenseAmount;
 }
 
-function monthlyBalance() {
+// calculate total balance 
+
+function calculateBalance() {
     const incomeText = document.getElementById("income");
     const incomeTotal = parseFloat(incomeText.value);
 
     const balance = document.getElementById("total-balance");
     const balanceTotal = balance.innerText;
 
-    const totalBalanceAmount = incomeTotal - monthlyExpense();
+    const totalBalanceAmount = incomeTotal - calculateExpense();
     balance.innerText = totalBalanceAmount;
 }
 
